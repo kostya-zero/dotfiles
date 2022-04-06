@@ -14,7 +14,7 @@ There plugins and new shortcuts for Vim.
 - **vim-airline** - Status bar for Vim. [Repository](https://github.com/vim-airline/vim-airline)
 - **vim-airline-themes** - Themes for AirLine status bar. [Repository](https://github.com/vim-airline/vim-airline-themes)
 - **vim-devicons** - Dev Icons for Vim and AirLine. Require nerd fonts. [Repository](https://github.com/ryanoasis/vim-devicons)
-- **YouCompleteMe** - Completer for Vim. Install manually. Read about installation in official GitHub repository. [Repository](https://github.com/ycm-core/YouCompleteMe)
+- **YouCompleteMe** - Completer for Vim. Install manually. Read about installation at YCM repo. [Repository](https://github.com/ycm-core/YouCompleteMe)
 - **vimsence** - Plugin for Discord Presence. [Repository](https://github.com/vimsence/vimsence)
 - **vim-fugitive** - Git wrapper for Vim. [Repository](https://github.com/tpope/vim-fugitive)
 - **vim-repeat** - Required for vim-surround. [Repository](https://github.com/tpope/vim-repeat)
