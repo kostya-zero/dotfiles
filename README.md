@@ -25,7 +25,7 @@ There plugins and new shortcuts for Vim.
 - **onedark.vim** - One Dark theme for Vim. [Repository](https://github.com/joshdick/onedark.vim)
 - **molokai** - Theme for vim looks like Monokai from Sublime Text. [Repository](https://github.com/tomasr/molokai)
 - **sonokai** - Another Monokai-like theme. [Repository](https://github.com/sainnhe/sonokai)
-- **dracual** - Dracula theme for Vim. [Repository](https://github.com/dracula/vim)
+- **dracula** - Dracula theme for Vim. [Repository](https://github.com/dracula/vim)
 - **nerdtree** - File explorer for Vim. [Repository](https://github.com/scrooloose/nerdtree)
 - **syntastic** - Syntax debuger. [Repository](https://github.com/scrooloose/syntastic)
 - **tabular** - Fix tabs (its dont work btw, use method in config). [Repository](https://github.com/godlygeek/tabular)
