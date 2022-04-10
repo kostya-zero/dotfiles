@@ -31,11 +31,11 @@ There plugins and new shortcuts for Vim.
 - **tabular** - Fix tabs (its dont work btw, use method in config). [Repository](https://github.com/godlygeek/tabular)
 
 ### Shortcuts
-- **F6** - Open previous tab.
-- **F7** - Open nex tab.
-- **CTRL+N** - Open NerdTree.
-- **CTRL+T** - Show/Hide NerdTree.
-- **CTRL+F** - Search item in NerdTree.
+- <kbd>F6</kbd> - Open previous tab.
+- <kbd>F7</kbd> - Open nex tab.
+- <kbd>CTRL</kbd> + <kbd>N</kbd> - Open NerdTree.
+- <kbd>CTRL</kbd> + <kbd>T</kbd> - Show/Hide NerdTree.
+- <kbd>CTRL</kbd> + <kbd>F</kbd> - Search item in NerdTree.
 
 ### Other addons
 - When you press bracket, Vim automatically sets close bracket behind cursor. In vanilla Vim when use "{" sets it onece, but with this config it sets close bracket "}" behind cursor. It works for quotes too.
