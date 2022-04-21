@@ -1,0 +1,13 @@
+idle_bg = "#6C6F93" # Rich black
+idle_fg = "#FFFFFF" # Silver
+info_bg = "#1EAEAE" # Maastricht Blue
+info_fg = "#FFFFFF" # Silver
+good_bg = "#394049" # Arsenic
+good_fg = "#FFFFFF" # Silver
+warning_bg = "#FAB28E" # Dark Purple
+warning_fg = "#FFFFFF" # Silver
+critical_bg = "#F43E5C" # Silver
+critical_fg = "#FFFFFF" # Dark Purple
+separator = ""
+separator_bg = "auto"
+separator_fg = "auto"
