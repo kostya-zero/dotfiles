@@ -5,6 +5,6 @@ map("n", "<leader>i", function()
 end, { desc = "Disable Inlay Hints" })
 
 -- Delete without writing to register.
-map("n", "d", '"_d')
-map("v", "d", '"_d')
-map("n", "c", '"_c')
+-- map("n", "d", '"_d')
+-- map("v", "d", '"_d')
+-- map("n", "c", '"_c')

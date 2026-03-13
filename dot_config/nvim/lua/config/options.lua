@@ -67,6 +67,9 @@ vim.filetype.add({
 -- Disable inlay hints
 vim.lsp.inlay_hint.enable(false)
 
+-- Enable custom LSPs
+vim.lsp.enable("go")
+
 -- LazyVim specific options
 vim.g.lazyvim_blink_main = false
 vim.g.lazyvim_picker = "telescope"

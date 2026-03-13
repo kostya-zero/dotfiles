@@ -5,12 +5,22 @@ return {
     },
     {
         "saghen/blink.cmp",
-        opts = function(_, opts)
-            -- I dont use snippets
-            -- opts.sources.default = { "lsp", "path", "buffer" }
-            opts.sources.default = { "lsp" }
-            return opts
-        end,
+        opts = {
+            sources = {
+                default = { "lsp" },
+            },
+            completion = {
+                menu = {
+                    winblend = vim.o.pumblend,
+                },
+            },
+
+            signature = {
+                window = {
+                    winblend = vim.o.pumblend,
+                },
+            },
+        },
     },
     {
         "monaqa/dial.nvim",
