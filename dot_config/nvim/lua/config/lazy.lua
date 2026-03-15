@@ -17,7 +17,7 @@ require("lazy").setup({
             "LazyVim/LazyVim",
             import = "lazyvim.plugins",
             opts = {
-                colorscheme = "jellybeans",
+                colorscheme = "solarized-osaka",
             },
         },
         { import = "lazyvim.plugins.extras.linting.eslint" },
@@ -37,8 +37,8 @@ require("lazy").setup({
     },
     install = { colorscheme = { "habamax" } },
     checker = {
-        enabled = false, -- check for plugin updates periodically
-        notify = false, -- notify on update
+        enabled = true, -- check for plugin updates periodically
+        notify = true, -- notify on update
     }, -- automatically check for plugin updates
     performance = {
         cache = {

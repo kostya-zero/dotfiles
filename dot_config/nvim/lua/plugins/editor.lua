@@ -3,6 +3,7 @@ return {
         "vyfor/cord.nvim",
         event = "VeryLazy",
         build = ":Cord update",
+        enabled = false,
         opts = {
             idle = {
                 enabled = false,
@@ -14,7 +15,7 @@ return {
     },
     { "wakatime/vim-wakatime", lazy = false, enabled = false },
     {
-        "snacks.nvim",
+        "folke/snacks.nvim",
         keys = {
             { "<leader>e", false },
             {
@@ -60,7 +61,7 @@ return {
         },
     },
     {
-        "telescope.nvim",
+        "nvim-telescope/telescope.nvim",
         enabled = true,
         dependencies = {
             "nvim-telescope/telescope-file-browser.nvim",
