@@ -5,7 +5,7 @@ config.default_prog = { "nu.exe" }
 config.mux_enable_ssh_agent = false
 
 config.initial_cols = 120
-config.initial_rows = 28
+config.initial_rows = 32
 
 config.webgpu_power_preference = "HighPerformance"
 config.front_end = "WebGpu"
@@ -16,8 +16,7 @@ config.cursor_blink_rate = 0
 config.default_cursor_style = "SteadyBlock"
 
 config.font_size = 12
--- config.color_scheme = "Solarized Dark (Gogh)"
-config.color_scheme = "Jellybeans"
+config.color_scheme = "Solarized Dark - Patched"
 config.font = wezterm.font("Lilex Nerd Font Mono", { weight = "Medium" })
 
 config.window_padding = {
