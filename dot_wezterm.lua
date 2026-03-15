@@ -2,7 +2,6 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.default_prog = { "nu.exe" }
-
 config.mux_enable_ssh_agent = false
 
 config.initial_cols = 120
@@ -19,8 +18,7 @@ config.default_cursor_style = "SteadyBlock"
 config.font_size = 12
 -- config.color_scheme = "Solarized Dark (Gogh)"
 config.color_scheme = "Jellybeans"
-
-config.font = wezterm.font("IosevkaTerm Nerd Font Mono", { weight = "Medium" })
+config.font = wezterm.font("Lilex Nerd Font Mono", { weight = "Medium" })
 
 config.window_padding = {
 	left = 0,
