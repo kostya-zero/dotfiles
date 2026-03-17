@@ -1,13 +1,13 @@
 local wezterm = require("wezterm")
+local act = wezterm.action
 local config = wezterm.config_builder()
 
 config.default_prog = { "nu.exe" }
 config.mux_enable_ssh_agent = false
 
 config.initial_cols = 120
-config.initial_rows = 32
+config.initial_rows = 35
 
-config.webgpu_power_preference = "HighPerformance"
 config.front_end = "WebGpu"
 
 config.hide_tab_bar_if_only_one_tab = true
@@ -25,5 +25,14 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
+
+config.keys = {}
+for i = 1, 9 do
+	table.insert(config.keys, {
+		key = tostring(i),
+		mods = "ALT",
+		action = act.ActivateTab(i - 1),
+	})
+end
 
 return config
