@@ -61,6 +61,7 @@ config.color_scheme = "Solarized Osaka"
 config.font = wezterm.font("Lilex Nerd Font Mono", { weight = "Medium" })
 
 config.hide_tab_bar_if_only_one_tab = false
+config.tab_max_width = 48
 config.show_new_tab_button_in_tab_bar = false
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
@@ -108,7 +109,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 
 	local index = tab.tab_index + 1
 	local cwd = get_cwd_name(tab.active_pane)
-	local title = string.format("%d: %s", index, cwd)
+	local title = string.format("%d  %s", index, cwd)
 
 	return {
 		{ Background = { Color = bg } },
