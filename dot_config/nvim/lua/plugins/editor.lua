@@ -42,6 +42,7 @@ return {
                 scroll = { enabled = vim.g.snacks_animate },
                 scope = { enabled = false },
             }
+            opts.explorer.replace_netrw = false
             return opts
         end,
     },
@@ -230,7 +231,7 @@ return {
                 buffers = {
                     theme = "dropdown",
                     initial_mode = "normal",
-                    hijack_netrw = true,
+                    hijack_netrw = false,
                     layout_config = {
                         center = { width = 0.55, height = 0.8 },
                     },
