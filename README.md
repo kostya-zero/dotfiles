@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > Don't blindly use my dotfiles if you don't know how they work. Use them at your own risk!
 
-These dotfiles are manager with [chezmoi](https://github.com/twpayne/chezmoi). Use this command to apply them:
+These dotfiles are managed with [chezmoi](https://github.com/twpayne/chezmoi). Use this command to apply them:
 
 ```shell
 chezmoi init --apply https://github.com/kostya-zero/dotfiles.git
