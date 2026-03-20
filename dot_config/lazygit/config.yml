@@ -1,0 +1,9 @@
+customCommands: 
+  - key: "C"
+    command: "git czg"
+    description: "Commit with czg"
+    context: "files"
+    loadingText: "launching czg"
+    output: "terminal"
+gui:
+  mouseEvents: false
