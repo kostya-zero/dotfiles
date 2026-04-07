@@ -72,6 +72,6 @@ vim.lsp.enable("go")
 
 -- LazyVim specific options
 vim.g.lazyvim_blink_main = false
-vim.g.lazyvim_picker = "telescope"
+-- vim.g.lazyvim_picker = "telescope"
 vim.g.snacks_animate = false
 vim.g.lazyvim_prettier_needs_config = true

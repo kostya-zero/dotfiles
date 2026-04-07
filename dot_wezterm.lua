@@ -56,7 +56,7 @@ for i = 1, 9 do
 	})
 end
 
-config.font_size = 14
+config.font_size = 11
 config.color_scheme = "Solarized Osaka"
 config.font = wezterm.font("Lilex Nerd Font Mono", { weight = "Medium" })
 

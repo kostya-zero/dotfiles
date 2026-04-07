@@ -15,17 +15,17 @@ return {
     },
     { "wakatime/vim-wakatime", lazy = false, enabled = false },
     {
-        "folke/snacks.nvim",
+        "nvim-neo-tree/neo-tree.nvim",
         keys = {
-            { "<leader>e", false },
-            {
-                "<leader>E",
-                function()
-                    Snacks.explorer()
-                end,
-                { desc = "Snacks explorer" },
-            },
+            { "<leader>e", "<cmd>Neotree float<cr>" },
         },
+        opts = function(_, opts)
+            opts.filesystem.bind_to_cwd = true
+            return opts
+        end,
+    },
+    {
+        "folke/snacks.nvim",
         opts = function(_, opts)
             opts.dashboard = {
                 enabled = true,
@@ -42,7 +42,6 @@ return {
                 scroll = { enabled = vim.g.snacks_animate },
                 scope = { enabled = false },
             }
-            opts.explorer.replace_netrw = false
             return opts
         end,
     },
@@ -63,7 +62,7 @@ return {
     },
     {
         "nvim-telescope/telescope.nvim",
-        enabled = true,
+        enabled = false,
         dependencies = {
             "nvim-telescope/telescope-file-browser.nvim",
         },
