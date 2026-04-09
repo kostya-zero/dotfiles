@@ -26,3 +26,28 @@ $env.config = {
 }
 
 source ~/.zoxide.nu
+
+# mise 
+def "parse vars" [] {
+  $in | from csv --noheaders --no-infer | rename 'op' 'name' 'value'
+}
+
+def --env "update-env" [] {
+  for $var in $in {
+    if $var.op == "set" {
+      if ($var.name | str upcase) == 'PATH' {
+        $env.PATH = ($var.value | split row (char esep))
+      } else {
+        load-env {($var.name): $var.value}
+      }
+    } else if $var.op == "hide" and $var.name in $env {
+      hide-env $var.name
+    }
+  }
+}
+
+def --env "mise update" [] {
+  mise hook-env -s nu | parse vars | update-env
+}
+
+mise update
