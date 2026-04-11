@@ -7,3 +7,4 @@ customCommands:
     output: "terminal"
 gui:
   mouseEvents: false
+  showIcons: true
