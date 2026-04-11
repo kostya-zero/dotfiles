@@ -5,11 +5,18 @@ local config = wezterm.config_builder()
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
 local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
 
+local JB_BG = "#151515"
+local JB_FG = "#e8e8d3"
+local JB_ACTIVE_BG = "#b39066" -- Yellow accent
+local JB_ACTIVE_FG = "#151515"
+local JB_INACTIVE_BG = "#333333"
+local JB_INACTIVE_FG = "#888888"
+local JB_STATUS_BLUE = "#8197bf"
+
 local function basename(path)
 	if not path or path == "" then
 		return "?"
 	end
-
 	path = path:gsub("[/\\]+$", "")
 	return path:match("([^/\\]+)$") or path
 end
@@ -19,11 +26,9 @@ local function get_cwd_name(pane)
 	if not cwd then
 		return "?"
 	end
-
 	if cwd.file_path then
 		return basename(cwd.file_path)
 	end
-
 	local s = tostring(cwd)
 	s = s:gsub("^file://[^/]*", "")
 	s = s:gsub("%%20", " ")
@@ -43,7 +48,6 @@ config.window_padding = {
 }
 
 config.front_end = "WebGpu"
-
 config.cursor_blink_rate = 0
 config.default_cursor_style = "SteadyBlock"
 
@@ -57,7 +61,7 @@ for i = 1, 9 do
 end
 
 config.font_size = 11
-config.color_scheme = "Solarized Osaka"
+config.color_scheme = "jellybeans-mono"
 config.font = wezterm.font("Lilex Nerd Font Mono", { weight = "Medium" })
 
 config.hide_tab_bar_if_only_one_tab = false
@@ -65,45 +69,46 @@ config.tab_max_width = 48
 config.show_new_tab_button_in_tab_bar = false
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
+
 config.colors = {
 	tab_bar = {
-		background = "#001419",
+		background = JB_BG,
 		active_tab = {
-			bg_color = "#001419",
-			fg_color = "#268bd3",
+			bg_color = JB_ACTIVE_BG,
+			fg_color = JB_ACTIVE_FG,
 		},
 		inactive_tab = {
-			bg_color = "#001e27",
-			fg_color = "#eae3cb",
+			bg_color = JB_INACTIVE_BG,
+			fg_color = JB_INACTIVE_FG,
 		},
 		inactive_tab_hover = {
-			bg_color = "#001e27",
-			fg_color = "#eae3cb",
+			bg_color = JB_INACTIVE_BG,
+			fg_color = JB_FG,
 			italic = false,
 		},
 		new_tab = {
-			bg_color = "#001e27",
-			fg_color = "#eae3cb",
+			bg_color = JB_BG,
+			fg_color = JB_FG,
 		},
 	},
 }
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-	local bg = "#001e27"
-	local fg = "#eae3cb"
+	local bg = JB_INACTIVE_BG
+	local fg = JB_INACTIVE_FG
+
 	if tab.is_active then
-		bg = "#b28500"
-		fg = "#eae3cb"
+		bg = JB_ACTIVE_BG
+		fg = JB_ACTIVE_FG
 	end
 
-	local next_bg = "#1a1b26"
+	local next_bg = JB_BG
 	local next_tab = tabs[tab.tab_index + 2]
-
 	if next_tab then
 		if next_tab.is_active then
-			next_bg = "#b28500"
+			next_bg = JB_ACTIVE_BG
 		else
-			next_bg = "#001e27"
+			next_bg = JB_INACTIVE_BG
 		end
 	end
 
@@ -123,9 +128,8 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 end)
 
 wezterm.on("update-status", function(window)
-	local color_scheme = window:effective_config().resolved_palette
-	local bg = color_scheme.background
-	local fg = "#9eabac"
+	local bg = JB_BG
+	local fg = JB_STATUS_BLUE
 
 	window:set_right_status(wezterm.format({
 		{ Background = { Color = "none" } },
