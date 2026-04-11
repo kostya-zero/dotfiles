@@ -9,7 +9,11 @@ vim.opt.title = true
 vim.opt.termguicolors = true
 
 -- Shell
-vim.opt.shell = "nu.exe"
+if vim.loop.os_uname().sysname == "Windows_NT" then
+    vim.opt.shell = "nu.exe"
+else
+    vim.opt.shell = "fish"
+end
 
 -- Tabs
 vim.opt.shiftwidth = 4
@@ -41,20 +45,6 @@ vim.opt.mouse = ""
 
 -- Ignore paths
 vim.opt.wildignore:append({ "*/node_modules/*", "*/target/*" })
-
--- Neovide
-vim.opt.guifont = "IosevkaTerm Nerd Font Mono:h20"
-vim.g.neovide_position_animation_length = 0
-vim.g.neovide_cursor_animation_length = 0.00
-vim.g.neovide_cursor_trail_size = 0
-vim.g.neovide_cursor_animate_in_insert_mode = false
-vim.g.neovide_cursor_animate_command_line = false
-vim.g.neovide_scroll_animation_far_lines = 0
-vim.g.neovide_scroll_animation_length = 0.00
-vim.g.neovide_floating_shadow = false
-vim.g.neovide_floating_z_height = 0
-vim.g.neovide_light_angle_degrees = 0
-vim.g.neovide_light_radius = 0
 
 -- Filetypes
 vim.filetype.add({
