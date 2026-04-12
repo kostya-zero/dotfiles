@@ -1,4 +1,4 @@
-theme = Solarized Dark Patched
+theme = jellybeans-mono
 font-family = Lilex Nerd Font Mono
 font-size = 14
 cursor-style = block
@@ -10,6 +10,4 @@ command = tmux
 window-padding-balance = true
 window-padding-y = 0
 window-padding-x = 0
-
-background = #031319
 background-opacity = 0.9
