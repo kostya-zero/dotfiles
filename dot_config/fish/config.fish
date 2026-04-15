@@ -1,4 +1,4 @@
-set fish_greeting -e
+set -U fish_greeting ""
 
 set -x EDITOR nvim
 set -x VISUAL nvim
@@ -16,4 +16,4 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 # mise
-~/.local/bin/mise activate fish | source
+mise activate fish | source
