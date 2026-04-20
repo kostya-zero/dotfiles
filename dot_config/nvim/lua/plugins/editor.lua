@@ -60,4 +60,11 @@ return {
             enable_tailwind = true,
         },
     },
+    {
+        "nvim-lualine/lualine.nvim",
+        opts = function(_, opts)
+            opts.options.theme = "jellybeans-nvim"
+            return opts
+        end,
+    },
 }
