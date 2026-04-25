@@ -4,14 +4,14 @@ author = "A. Fox"
 origin_url = ""
 
 [colors]
-foreground = "#e8e8d3"
+foreground = "#c7c7c7"
 background = "#151515"
 cursor_fg = "#151515"
-cursor_bg = "#e8e8d3"
-cursor_border = "#e8e8d3"
+cursor_bg = "#c7c7c7"
+cursor_border = "#c7c7c7"
 selection_fg = "#151515"
 selection_bg = "#888888"
-compose_cursor = "#e8e8d3"
+compose_cursor = "#c7c7c7"
 visual_bell = "#40000a"
 
 ansi = [
