@@ -1,20 +1,14 @@
 local wezterm = require("wezterm")
-local act = wezterm.action
 local config = wezterm.config_builder()
 
-config = require("config").setup_config(wezterm)
+-- Modules
+local general = require("modules.general")
+local appearance = require("modules.appearance")
+local keys = require("modules.keys")
 
-config.keys = {}
-for i = 1, 9 do
-	table.insert(config.keys, {
-		key = tostring(i),
-		mods = "ALT",
-		action = act.ActivateTab(i - 1),
-	})
-end
-
-local appearance = require("appearance")
-config.colors = appearance.colors
-appearance.setup_status(wezterm)
+-- Apply configurations
+general.apply_to_config(config)
+appearance.apply_to_config(config)
+keys.apply_to_config(config)
 
 return config
