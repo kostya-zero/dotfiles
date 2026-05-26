@@ -1,4 +1,4 @@
-customCommands: 
+customCommands:
   - key: "C"
     command: "git czg"
     description: "Commit with czg"
@@ -8,3 +8,24 @@ customCommands:
 gui:
   mouseEvents: false
   showIcons: true
+  theme:
+    activeBorderColor:
+      - "#8BA4B0"
+      - bold
+    inactiveBorderColor:
+      - "#525252"
+    searchingActiveBorderColor:
+      - "#E6C384"
+      - bold
+    optionsTextColor:
+      - "#7FB4CA"
+    selectedLineBgColor:
+      - "#22262D"
+    cherryPickedCommitBgColor:
+      - "#22262D"
+    cherryPickedCommitFgColor:
+      - "#87A987"
+    unstagedChangesColor:
+      - "#E46876"
+    defaultFgColor:
+      - "#C5C9C7"
