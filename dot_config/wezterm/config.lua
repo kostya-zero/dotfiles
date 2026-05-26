@@ -21,7 +21,7 @@ function M.setup_config(wezterm)
 		animation_fps = 120,
 
 		font_size = 11,
-		color_scheme = "jellybeans-mono",
+		color_scheme = "kanagawa-paper-ink",
 		font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Medium" }),
 
 		hide_tab_bar_if_only_one_tab = false,

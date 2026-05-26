@@ -1,20 +1,20 @@
 local wezterm = require("wezterm")
 local helpers = require("utils.helpers")
 
-local JB_BG = "#151515"
-local JB_FG = "#e8e8d3"
-local JB_ACTIVE_BG = "#b39066" -- Yellow accent
-local JB_ACTIVE_FG = "#151515"
-local JB_INACTIVE_BG = "#333333"
-local JB_INACTIVE_FG = "#888888"
-local JB_STATUS_BLUE = "#8197bf"
+local JB_BG = "#090E13"
+local JB_FG = "#C5C9C7"
+local JB_ACTIVE_BG = "#C5C9C7"
+local JB_ACTIVE_FG = "#090E13"
+local JB_INACTIVE_BG = "#090E13"
+local JB_INACTIVE_FG = "#A4A7A4"
+local JB_STATUS_BLUE = "#7FB4CA"
 
 local M = {}
 
 function M.apply_to_config(config)
 	-- General Appearance
 	config.font_size = 11
-	config.color_scheme = "jellybeans-mono"
+	config.color_scheme = "kanso"
 	config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Medium" })
 
 	-- Tab Bar
