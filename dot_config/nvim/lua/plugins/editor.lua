@@ -63,7 +63,7 @@ return {
     {
         "nvim-lualine/lualine.nvim",
         opts = function(_, opts)
-            opts.options.theme = "jellybeans-nvim"
+            opts.options.theme = "kanso"
             return opts
         end,
     },

@@ -17,7 +17,7 @@ require("lazy").setup({
             "LazyVim/LazyVim",
             import = "lazyvim.plugins",
             opts = {
-                colorscheme = "jellybeans",
+                colorscheme = "kanso",
             },
         },
         { import = "lazyvim.plugins.extras.linting.eslint" },
@@ -27,10 +27,7 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.lang.json" },
         { import = "lazyvim.plugins.extras.lang.tailwind" },
         { import = "lazyvim.plugins.extras.lang.go" },
-        { import = "lazyvim.plugins.extras.lang.python" },
         { import = "lazyvim.plugins.extras.lang.sql" },
-        { import = "lazyvim.plugins.extras.lang.php" },
-        { import = "lazyvim.plugins.extras.lang.yaml" },
         { import = "lazyvim.plugins.extras.editor.neo-tree" },
         { import = "plugins" },
     },
@@ -38,7 +35,7 @@ require("lazy").setup({
         lazy = false,
         version = false, -- always use the latest git commit
     },
-    install = { colorscheme = { "jellybeans", "habamax" } },
+    install = { colorscheme = { "kanso", "habamax" } },
     checker = {
         enabled = false, -- check for plugin updates periodically
         notify = false, -- notify on update
