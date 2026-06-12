@@ -40,6 +40,9 @@ vim.opt.hlsearch = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 
+-- Disable conceallevel
+vim.opt.conceallevel = 0
+
 -- Disable mouse
 vim.opt.mouse = ""
 
@@ -57,11 +60,7 @@ vim.filetype.add({
 -- Disable inlay hints
 vim.lsp.inlay_hint.enable(false)
 
--- Enable custom LSPs
-vim.lsp.enable("go")
-
 -- LazyVim specific options
 vim.g.lazyvim_blink_main = false
--- vim.g.lazyvim_picker = "telescope"
-vim.g.snacks_animate = false
+vim.g.snacks_animate = true
 vim.g.lazyvim_prettier_needs_config = true

@@ -1,28 +1,5 @@
 return {
     {
-        "friendly-snippets",
-        enabled = false,
-    },
-    {
-        "saghen/blink.cmp",
-        opts = {
-            sources = {
-                default = { "lsp" },
-            },
-            completion = {
-                menu = {
-                    winblend = vim.o.pumblend,
-                },
-            },
-
-            signature = {
-                window = {
-                    winblend = vim.o.pumblend,
-                },
-            },
-        },
-    },
-    {
         "monaqa/dial.nvim",
         keys = {
             {
