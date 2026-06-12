@@ -8,24 +8,29 @@ customCommands:
 gui:
   mouseEvents: false
   showIcons: true
+  nerdFontsVersion: "3"
   theme:
     activeBorderColor:
-      - "#8BA4B0"
-      - bold
+      - "#c94c16"
+      - "bold"
     inactiveBorderColor:
-      - "#525252"
+      - "#664c00"
     searchingActiveBorderColor:
-      - "#E6C384"
-      - bold
+      - "#c94c16"
+      - "bold"
     optionsTextColor:
-      - "#7FB4CA"
+      - "#268bd3"
     selectedLineBgColor:
-      - "#22262D"
-    cherryPickedCommitBgColor:
-      - "#22262D"
+      - "#1a6397"
     cherryPickedCommitFgColor:
-      - "#87A987"
+      - "#268bd3"
+    cherryPickedCommitBgColor:
+      - "#d23681"
+    markedBaseCommitFgColor:
+      - "#268bd3"
+    markedBaseCommitBgColor:
+      - "#b28500"
     unstagedChangesColor:
-      - "#E46876"
+      - "#f55350"
     defaultFgColor:
-      - "#C5C9C7"
+      - "#839395"
