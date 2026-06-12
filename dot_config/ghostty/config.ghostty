@@ -4,10 +4,10 @@
 command = fish
 
 # theme
-theme = jellybeans-mono
+theme = Solarized Dark Patched 
 
 # font
-font-family = Lilex Nerd Font Mono
+font-family = Lilex Nerd Font Mono 
 font-size = 14
 
 # cursor
@@ -20,7 +20,8 @@ window-height = 30
 window-padding-balance = true
 window-padding-y = 0
 window-padding-x = 0
-background-opacity = 1
+background-opacity = 0.9
+background = #031219
 
 # keybinds
 keybind = ctrl+shift+t=unbind
