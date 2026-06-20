@@ -5,7 +5,7 @@ function M.apply_to_config(config)
 	config.mux_enable_ssh_agent = false
 
 	config.initial_rows = 30
-	config.initial_cols = 120
+	config.initial_cols = 110
 	config.window_padding = {
 		left = 0,
 		right = 0,

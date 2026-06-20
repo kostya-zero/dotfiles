@@ -10,6 +10,7 @@ return {
             servers = {
                 html = {},
                 cssls = {},
+                vtsls = false,
             },
         },
     },

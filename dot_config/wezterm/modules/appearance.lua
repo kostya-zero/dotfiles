@@ -1,25 +1,34 @@
 local wezterm = require("wezterm")
 local helpers = require("utils.helpers")
 
+-- Solarized
+-- local JB_BG = "#001419"
+-- local JB_FG = "#9eabac"
+-- local JB_ACTIVE_BG = "#9eabac"
+-- local JB_ACTIVE_FG = "#001419"
+-- local JB_INACTIVE_BG = "#001419"
+-- local JB_INACTIVE_FG = "#839395"
+
+-- Kanso
 local JB_BG = "#090E13"
 local JB_FG = "#C5C9C7"
 local JB_ACTIVE_BG = "#C5C9C7"
 local JB_ACTIVE_FG = "#090E13"
 local JB_INACTIVE_BG = "#090E13"
-local JB_INACTIVE_FG = "#A4A7A4"
-local JB_STATUS_BLUE = "#7FB4CA"
+local JB_INACTIVE_FG = "#C5C9C7"
 
 local M = {}
 
 function M.apply_to_config(config)
 	-- General Appearance
-	config.font_size = 11
+	config.font_size = 12
 	config.color_scheme = "kanso"
-	config.font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Medium" })
+	config.font = wezterm.font("Lilex Nerd Font Mono", { weight = "Regular" })
 
 	-- Tab Bar
 	config.hide_tab_bar_if_only_one_tab = false
 	config.tab_max_width = 48
+	config.window_background_opacity = 0.5
 	config.show_new_tab_button_in_tab_bar = false
 	config.use_fancy_tab_bar = false
 	config.tab_bar_at_bottom = true
@@ -94,7 +103,7 @@ function M.setup_status()
 	wezterm.on("update-status", function(window)
 		local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
 		local bg = JB_BG
-		local fg = JB_STATUS_BLUE
+		local fg = JB_FG
 		local workspace = window:active_workspace()
 
 		window:set_right_status(wezterm.format({

@@ -3,7 +3,7 @@ return {
         "vyfor/cord.nvim",
         event = "VeryLazy",
         build = ":Cord update",
-        enabled = false,
+        enabled = true,
         opts = {
             idle = {
                 enabled = false,
@@ -34,5 +34,12 @@ return {
             }
             return opts
         end,
+    },
+    {
+        "m4xshen/hardtime.nvim",
+        lazy = false,
+        dependencies = { "MunifTanjim/nui.nvim" },
+        enabled = false,
+        opts = {},
     },
 }

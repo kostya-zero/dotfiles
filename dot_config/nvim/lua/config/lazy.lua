@@ -17,12 +17,12 @@ require("lazy").setup({
             "LazyVim/LazyVim",
             import = "lazyvim.plugins",
             opts = {
-                colorscheme = "solarized-osaka",
+                colorscheme = "kanso",
             },
         },
         { import = "lazyvim.plugins.extras.linting.eslint" },
         { import = "lazyvim.plugins.extras.formatting.prettier" },
-        { import = "lazyvim.plugins.extras.lang.typescript" },
+        { import = "lazyvim.plugins.extras.lang.typescript.tsgo" },
         { import = "lazyvim.plugins.extras.lang.rust" },
         { import = "lazyvim.plugins.extras.lang.json" },
         { import = "lazyvim.plugins.extras.lang.tailwind" },
@@ -36,7 +36,7 @@ require("lazy").setup({
         lazy = false,
         version = false, -- always use the latest git commit
     },
-    install = { colorscheme = { "solarized-osaka", "habamax" } },
+    install = { colorscheme = { "habamax" } },
     checker = {
         enabled = true, -- check for plugin updates periodically
         notify = true, -- notify on update
