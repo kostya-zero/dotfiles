@@ -8,5 +8,4 @@ vim.g.loaded_perl_provider = 0
 
 require("config.options")
 require("config.lazy")
-require("config.lsp")
 require("config.keymaps")

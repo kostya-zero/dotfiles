@@ -14,6 +14,8 @@ return {
 			},
 		},
 		ensure_installed = {
+			"clangd",
+			"clang-format",
 			"gopls",
 			"gofumpt",
 			"goimports",

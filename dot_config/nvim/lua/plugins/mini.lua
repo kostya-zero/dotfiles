@@ -1,8 +1,13 @@
 return {
 	{
+		"windwp/nvim-ts-autotag",
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {},
+	},
+	{
 		"nvim-mini/mini.pairs",
 		version = "*",
-		event = "BufReadPost",
+		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			modes = { insert = true, command = true, terminal = false },
 			-- skip autopair when next character is one of these
@@ -18,7 +23,7 @@ return {
 	},
 	{
 		"nvim-mini/mini.ai",
-		event = "BufReadPost",
+		event = { "BufReadPre", "BufNewFile" },
 		opts = function()
 			local ai = require("mini.ai")
 			return {
@@ -33,7 +38,12 @@ return {
 					t = { "<([%p%w]-)%f[^<%w][^<>]->.-</%1>", "^<.->().*()</[^/]->$" }, -- tags
 					d = { "%f[%d]%d+" }, -- digits
 					e = { -- Word with case
-						{ "%u[%l%d]+%f[^%l%d]", "%f[%S][%l%d]+%f[^%l%d]", "%f[%P][%l%d]+%f[^%l%d]", "^[%l%d]+%f[^%l%d]" },
+						{
+							"%u[%l%d]+%f[^%l%d]",
+							"%f[%S][%l%d]+%f[^%l%d]",
+							"%f[%P][%l%d]+%f[^%l%d]",
+							"^[%l%d]+%f[^%l%d]",
+						},
 						"^().*()$",
 					},
 					u = ai.gen_spec.function_call(), -- u for "Usage"
@@ -60,5 +70,5 @@ return {
 				return package.loaded["nvim-web-devicons"]
 			end
 		end,
-	}
+	},
 }

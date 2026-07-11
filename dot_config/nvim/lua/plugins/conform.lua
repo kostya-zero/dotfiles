@@ -28,6 +28,8 @@ return {
 			lua = { "stylua" },
 			go = { "goimports", "gofumpt" },
 			rust = { "rustfmt" },
+			c = { "clang-format" },
+			cpp = { "clang-format" },
 			typescript = { "oxfmt" },
 			javascript = { "oxfmt" },
 			javascriptreact = { "oxfmt" },
