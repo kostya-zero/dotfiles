@@ -1,48 +1,66 @@
-vim.g.mapleader = " "
-vim.g.localleader = "\\"
+-- Encoding
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
 
+-- Enable title
+vim.opt.title = true
+
+-- Enable 256 colors support
+vim.opt.termguicolors = true
+
+-- Shell
 if vim.loop.os_uname().sysname == "Windows_NT" then
-	vim.opt.shell = "nu.exe"
+    vim.opt.shell = "pwsh"
 else
-	vim.opt.shell = "fish"
+    vim.opt.shell = "fish"
 end
 
-local opt = vim.opt
+-- Tabs
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.smarttab = true
+vim.opt.breakindent = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
-opt.encoding = "utf-8"
-opt.fileencoding = "utf-8"
+-- Disable providers for plugins
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_python_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
 
-opt.number = true
-opt.relativenumber = true
-opt.cursorline = true
-opt.title = true
-opt.termguicolors = true
-opt.mouse = ""
-opt.clipboard = "unnamedplus"
-opt.laststatus = 3
-opt.shiftwidth = 4
-opt.tabstop = 4
-opt.smarttab = true
-opt.breakindent = true
-opt.autoindent = true
-opt.smartindent = true
-opt.wrap = false
-opt.scrolloff = 5
-opt.spelllang = { "en" }
-opt.ruler = false
-opt.showmode = false
-opt.hlsearch = true
-opt.backup = false
-opt.swapfile = false
-opt.confirm = true
-opt.wildignore:append({ "*/node_modules/*", "*/target/*" })
-opt.completeopt = "menu,menuone,noselect"
-opt.conceallevel = 0
+-- No wrap lines
+vim.opt.wrap = false
+
+-- Highlight Search
+vim.opt.hlsearch = true
+
+-- Swap and backup
+vim.opt.swapfile = false
+vim.opt.backup = false
+
+-- Disable conceallevel
+vim.opt.conceallevel = 0
+
+-- Disable mouse
+vim.opt.mouse = ""
+
+-- Ignore paths
+vim.opt.wildignore:append({ "*/node_modules/*", "*/target/*" })
 
 -- Filetypes
 vim.filetype.add({
-	extension = {
-		mdx = "mdx",
-		ccf = "kdl",
-	},
+    extension = {
+        mdx = "mdx",
+        ccf = "kdl",
+    },
 })
+
+-- Disable inlay hints
+vim.lsp.inlay_hint.enable(false)
+
+-- LazyVim specific options
+vim.g.lazyvim_blink_main = false
+vim.g.snacks_animate = false
+vim.g.lazyvim_prettier_needs_config = true
