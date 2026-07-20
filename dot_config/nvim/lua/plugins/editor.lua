@@ -3,7 +3,7 @@ return {
         "vyfor/cord.nvim",
         event = "VeryLazy",
         build = ":Cord update",
-        enabled = true,
+        enabled = false,
         opts = {
             idle = {
                 enabled = false,
@@ -16,8 +16,8 @@ return {
     {
         "nvim-neo-tree/neo-tree.nvim",
         keys = {
-            { "<leader>e", "<cmd>Neotree position=float<cr>", desc = "Open floating Neotree" },
-            { "<leader>E", "<cmd>Neotree position=right<cr>", desc = "Open Neotree on the right side" },
+            { "<leader>E", "<cmd>Neotree position=float<cr>", desc = "Open floating Neotree" },
+            { "<leader>e", "<cmd>Neotree position=right<cr>", desc = "Open Neotree on the right side" },
         },
         ---@module "neo-tree"
         ---@type neotree.Config.Base
@@ -50,15 +50,42 @@ return {
         keys = {
             { "<leader>gg", false },
         },
-        opts = function(_, opts)
-            opts.dashboard.preset.header = [[
-            ]]
-            opts.dashboard.sections = {
-                -- { section = "header" },
-                { width = 2, section = "keys", indent = 0, padding = 1 },
-                { section = "startup" },
-            }
-            return opts
-        end,
+        ---@module "snacks"
+        ---@type snacks.Config.base
+        opts = {
+            dashboard = {
+                width = 40,
+                preset = {
+                    header = "",
+                    keys = {
+                        {
+                            icon = " ",
+                            key = "f",
+                            desc = "Find File",
+                            action = ":lua Snacks.dashboard.pick('files')",
+                        },
+                        {
+                            icon = "󰊢 ",
+                            key = "g",
+                            desc = "Open Neogit",
+                            action = ":Neogit",
+                        },
+                        { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+                        {
+                            icon = "󰒲 ",
+                            key = "l",
+                            desc = "Lazy",
+                            action = ":Lazy",
+                            enabled = package.loaded.lazy ~= nil,
+                        },
+                        { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+                    },
+                },
+                sections = {
+                    { section = "keys", gap = 0, padding = 1 },
+                    { section = "startup" },
+                },
+            },
+        },
     },
 }
