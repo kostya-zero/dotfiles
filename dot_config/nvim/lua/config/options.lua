@@ -62,5 +62,5 @@ vim.lsp.inlay_hint.enable(false)
 
 -- LazyVim specific options
 vim.g.lazyvim_blink_main = false
+vim.g.lazyvim_ts_lsp = "tsgo"
 vim.g.snacks_animate = false
-vim.g.lazyvim_prettier_needs_config = true

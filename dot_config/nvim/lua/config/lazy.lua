@@ -11,24 +11,26 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local theme = "kanso"
+
 require("lazy").setup({
     spec = {
         {
             "LazyVim/LazyVim",
             import = "lazyvim.plugins",
             opts = {
-                colorscheme = "kanso",
+                colorscheme = theme,
             },
         },
-        { import = "lazyvim.plugins.extras.lang.typescript.tsgo" },
+        { import = "lazyvim.plugins.extras.lang.typescript" },
         { import = "lazyvim.plugins.extras.lang.typescript.oxc" },
         { import = "lazyvim.plugins.extras.lang.rust" },
         { import = "lazyvim.plugins.extras.lang.json" },
         { import = "lazyvim.plugins.extras.lang.tailwind" },
-        { import = "lazyvim.plugins.extras.lang.go" },
         { import = "lazyvim.plugins.extras.lang.sql" },
         { import = "lazyvim.plugins.extras.lang.clangd" },
-        { import = "lazyvim.plugins.extras.lang.zig" },
+        -- { import = "lazyvim.plugins.extras.lang.docker" },
+        -- { import = "lazyvim.plugins.extras.lang.zig" },
         { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
         { import = "lazyvim.plugins.extras.editor.neo-tree" },
         { import = "plugins" },
@@ -37,9 +39,9 @@ require("lazy").setup({
         lazy = false,
         version = false, -- always use the latest git commit
     },
-    install = { colorscheme = { "kanso", "habamax" } },
+    install = { colorscheme = { theme, "habamax" } },
     checker = {
-        enabled = true, -- check for plugin updates periodically
+        enabled = false, -- check for plugin updates periodically
         notify = false, -- notify on update
     }, -- automatically check for plugin updates
     performance = {

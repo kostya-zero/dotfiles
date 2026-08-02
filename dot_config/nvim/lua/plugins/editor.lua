@@ -16,21 +16,21 @@ return {
     {
         "nvim-neo-tree/neo-tree.nvim",
         keys = {
-            { "<leader>E", "<cmd>Neotree position=float<cr>", desc = "Open floating Neotree" },
-            { "<leader>e", "<cmd>Neotree position=right<cr>", desc = "Open Neotree on the right side" },
+            { "<leader>e", "<cmd>Neotree position=float<cr>", desc = "Open Neotree on the right side" },
         },
+        enabled = true,
         ---@module "neo-tree"
-        ---@type neotree.Config.Base
+        ---@class neotree.Config.Base
         opts = {
-            hide_root_node = true,
-            retain_hidden_root_indent = true,
+            hide_root_node = false,
+            retain_hidden_root_indent = false,
             close_if_last_window = true,
             filesystem = {
                 bind_to_cwd = true,
                 use_libuv_file_watcher = true,
             },
             window = {
-                width = "30",
+                width = 30,
                 position = "right",
             },
         },
@@ -53,6 +53,24 @@ return {
         ---@module "snacks"
         ---@type snacks.Config.base
         opts = {
+            picker = {
+                sources = {
+                    explorer = {
+                        layout = {
+                            hidden = { "input" },
+                            layout = {
+                                position = "right",
+                                width = 30,
+                            },
+                        },
+                    },
+                    files = {
+                        layout = {
+                            preset = "vertical",
+                        },
+                    },
+                },
+            },
             dashboard = {
                 width = 40,
                 preset = {
@@ -69,8 +87,14 @@ return {
                             key = "g",
                             desc = "Open Neogit",
                             action = ":Neogit",
+                            {
+                                icon = " ",
+                                key = "c",
+                                desc = "Config",
+                                action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
+                            },
                         },
-                        { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+                        -- { icon = " ", key = "s", desc = "Restore Session", section = "session" },
                         {
                             icon = "󰒲 ",
                             key = "l",
@@ -84,6 +108,14 @@ return {
                 sections = {
                     { section = "keys", gap = 0, padding = 1 },
                     { section = "startup" },
+                },
+            },
+            indent = {
+                animate = {
+                    enabled = false,
+                },
+                scope = {
+                    enabled = false,
                 },
             },
         },
