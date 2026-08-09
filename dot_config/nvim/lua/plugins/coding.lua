@@ -5,22 +5,10 @@ return {
     },
     {
         "saghen/blink.cmp",
-        opts = {
-            sources = {
-                default = { "lsp" },
-            },
-            completion = {
-                menu = {
-                    winblend = vim.o.pumblend,
-                },
-            },
-
-            signature = {
-                window = {
-                    winblend = vim.o.pumblend,
-                },
-            },
-        },
+        opts = function(_, opts)
+            opts.sources.default = { "lsp" }
+            return opts
+        end,
     },
     {
         "monaqa/dial.nvim",

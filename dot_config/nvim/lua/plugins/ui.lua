@@ -9,11 +9,11 @@ return {
                 show_close_icon = false,
                 show_tab_indicators = false,
                 modified_icon = "",
-                always_show_bufferline = true,
+                always_show_bufferline = false,
                 indicator = {
                     style = "none",
                 },
-                separator_style = "none",
+                separator_style = "slant",
             },
         },
     },
@@ -23,6 +23,9 @@ return {
         ---@module "noice"
         ---@type NoiceConfig
         opts = {
+            cmdline = {
+                view = "cmdline",
+            },
             routes = {
                 filter = {
                     event = "notify",
@@ -33,6 +36,12 @@ return {
             presets = {
                 lsp_doc_border = true,
             },
+        },
+    },
+    {
+        "folke/which-key.nvim",
+        opts = {
+            preset = "classic",
         },
     },
 }

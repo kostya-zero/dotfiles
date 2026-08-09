@@ -1,16 +1,25 @@
 return {
     {
-        "webhooked/kanso.nvim",
+        "HoNamDuong/hybrid.nvim",
         lazy = true,
-        priority = 1000,
-        ---@module "kanso"
-        ---@type KansoConfig
+    },
+    {
+        "rmehri01/onenord.nvim",
+        lazy = true,
+    },
+    {
+        "wtfox/luna.nvim",
+        lazy = true,
+    },
+    {
+        "craftzdog/solarized-osaka.nvim",
+        lazy = true,
         opts = {
             transparent = false,
-            background = {
-                dark = "zen",
-                light = "pearl",
-            },
         },
+    },
+    {
+        "wtfox/jellybeans.nvim",
+        lazy = true,
     },
 }

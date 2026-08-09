@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local theme = "kanso"
+local theme = "jellybeans"
 
 require("lazy").setup({
     spec = {
@@ -27,23 +27,23 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.lang.rust" },
         { import = "lazyvim.plugins.extras.lang.json" },
         { import = "lazyvim.plugins.extras.lang.tailwind" },
-        { import = "lazyvim.plugins.extras.lang.sql" },
+        -- { import = "lazyvim.plugins.extras.lang.sql" },
         { import = "lazyvim.plugins.extras.lang.clangd" },
         -- { import = "lazyvim.plugins.extras.lang.docker" },
-        -- { import = "lazyvim.plugins.extras.lang.zig" },
+        { import = "lazyvim.plugins.extras.lang.zig" },
         { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
         { import = "lazyvim.plugins.extras.editor.neo-tree" },
         { import = "plugins" },
     },
     defaults = {
         lazy = false,
-        version = false, -- always use the latest git commit
+        version = false,
     },
     install = { colorscheme = { theme, "habamax" } },
     checker = {
-        enabled = false, -- check for plugin updates periodically
-        notify = false, -- notify on update
-    }, -- automatically check for plugin updates
+        enabled = false,
+        notify = false,
+    },
     performance = {
         cache = {
             enabled = false,
@@ -51,34 +51,34 @@ require("lazy").setup({
         rtp = {
             disabled_plugins = {
                 "2html_plugin",
-                "tohtml",
+                "bugreport",
+                "compiler",
+                "ftplugin",
                 "getscript",
                 "getscriptPlugin",
                 "gzip",
                 "logipat",
+                "matchit",
                 "netrw",
+                "netrwFileHandlers",
                 "netrwPlugin",
                 "netrwSettings",
-                "netrwFileHandlers",
-                "matchit",
+                "optwin",
+                "rplugin",
+                "rrhelper",
+                "spellfile_plugin",
+                "synmenu",
+                "syntax",
+                "syntax",
                 "tar",
                 "tarPlugin",
-                "rrhelper",
+                "tohtml",
                 "tutor",
-                "spellfile_plugin",
+                "tutor",
                 "vimball",
                 "vimballPlugin",
                 "zip",
                 "zipPlugin",
-                "tutor",
-                "rplugin",
-                "syntax",
-                "synmenu",
-                "optwin",
-                "compiler",
-                "bugreport",
-                "ftplugin",
-                "syntax",
             },
         },
     },

@@ -16,7 +16,8 @@ return {
     {
         "nvim-neo-tree/neo-tree.nvim",
         keys = {
-            { "<leader>e", "<cmd>Neotree position=float<cr>", desc = "Open Neotree on the right side" },
+            -- { "<leader>e", "<cmd>Neotree position=float<cr>", desc = "Open Neotree " },
+            { "<leader>e", "<cmd>Neotree position=right<cr>", desc = "Open Neotree as Sidebar" },
         },
         enabled = true,
         ---@module "neo-tree"
