@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local theme = "jellybeans"
+local theme = "luna"
 
 require("lazy").setup({
     spec = {
@@ -27,10 +27,7 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.lang.rust" },
         { import = "lazyvim.plugins.extras.lang.json" },
         { import = "lazyvim.plugins.extras.lang.tailwind" },
-        -- { import = "lazyvim.plugins.extras.lang.sql" },
         { import = "lazyvim.plugins.extras.lang.clangd" },
-        -- { import = "lazyvim.plugins.extras.lang.docker" },
-        { import = "lazyvim.plugins.extras.lang.zig" },
         { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
         { import = "lazyvim.plugins.extras.editor.neo-tree" },
         { import = "plugins" },
