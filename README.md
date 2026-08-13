@@ -12,9 +12,10 @@ chezmoi init --apply https://github.com/kostya-zero/dotfiles.git
 ## Programs
 
 - [NeoVim](https://github.com/neovim/neovim)
-- [Nushell](https://github.com/nushell/nushell)
+- [Ghostty](https://github.com/ghostty-org/ghostty)
 - [WezTerm](https://github.com/wez/wezterm)
 - [lazygit](https://github.com/jesseduffield/lazygit)
+- [rg](https://github.com/BurntSushi/ripgrep)
 - [bat](https://github.com/sharkdp/bat)
 - [fd](https://github.com/sharkdp/fd)
 
