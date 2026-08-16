@@ -4,10 +4,6 @@ return {
         lazy = true,
     },
     {
-        "rmehri01/onenord.nvim",
-        lazy = true,
-    },
-    {
         "wtfox/luna.nvim",
         lazy = true,
     },
@@ -17,9 +13,5 @@ return {
         opts = {
             transparent = false,
         },
-    },
-    {
-        "wtfox/jellybeans.nvim",
-        lazy = true,
     },
 }
