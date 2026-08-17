@@ -4,7 +4,13 @@ return {
         event = "VeryLazy",
         build = ":Cord update",
         enabled = true,
+        ---@module "cord"
+        ---@type CordConfig
         opts = {
+            display = {
+                theme = "atom",
+                flavor = "accent",
+            },
             idle = {
                 enabled = false,
             },
@@ -16,7 +22,6 @@ return {
     {
         "nvim-neo-tree/neo-tree.nvim",
         keys = {
-            -- { "<leader>e", "<cmd>Neotree position=float<cr>", desc = "Open Neotree " },
             { "<leader>e", "<cmd>Neotree position=right<cr>", desc = "Open Neotree as Sidebar" },
         },
         enabled = true,
@@ -87,5 +92,10 @@ return {
                 },
             },
         },
+    },
+    {
+        "jim-fx/sudoku.nvim",
+        cmd = "Sudoku",
+        opts = {},
     },
 }

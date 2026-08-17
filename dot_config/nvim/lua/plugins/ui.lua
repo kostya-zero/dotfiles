@@ -13,7 +13,7 @@ return {
                 indicator = {
                     style = "none",
                 },
-                separator_style = "slant",
+                separator_style = "thin",
             },
         },
     },

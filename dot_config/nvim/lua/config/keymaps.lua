@@ -7,6 +7,5 @@ end, { desc = "Disable Inlay Hints" })
 map("t", "<esc><esc><esc>", "<C-\\><C-n>", { silent = true })
 
 -- Delete without writing to register.
--- map("n", "d", '"_d')
--- map("v", "d", '"_d')
--- map("n", "c", '"_c')
+map("n", "<leader>dd", '"_d')
+map("v", "<leader>dd", '"_d')
