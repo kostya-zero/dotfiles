@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local theme = "luna"
+local theme = "solarized-osaka-vivid"
 
 require("lazy").setup({
     spec = {

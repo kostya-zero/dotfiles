@@ -1,9 +1,5 @@
 return {
     {
-        "HoNamDuong/hybrid.nvim",
-        lazy = true,
-    },
-    {
         "wtfox/luna.nvim",
         lazy = true,
     },

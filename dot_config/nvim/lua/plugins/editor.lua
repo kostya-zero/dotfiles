@@ -22,7 +22,7 @@ return {
     {
         "nvim-neo-tree/neo-tree.nvim",
         keys = {
-            { "<leader>e", "<cmd>Neotree position=right<cr>", desc = "Open Neotree as Sidebar" },
+            { "<leader>e", "<cmd>Neotree position=float<cr>", desc = "Open Neotree" },
         },
         enabled = true,
         ---@module "neo-tree"
