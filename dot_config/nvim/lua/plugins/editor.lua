@@ -40,6 +40,14 @@ return {
     {
         "esmuellert/codediff.nvim",
         cmd = "CodeDiff",
+        keys = {
+            { "<leader>cD", "<cmd>CodeDiff<cr>", desc = "Open CodeDiff" },
+        },
+        opts = {
+            explorer = {
+                auto_open_on_cursor = true,
+            },
+        },
     },
     {
         "Bekaboo/dropbar.nvim",
