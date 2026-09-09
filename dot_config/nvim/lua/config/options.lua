@@ -62,6 +62,9 @@ vim.g.lazyvim_blink_main = false
 vim.g.lazyvim_ts_lsp = "tsgo"
 vim.g.snacks_animate = false
 
+-- Options specific for my config
+vim.g.zero_transparency = false
+
 -- Neovide
 if vim.g.neovide then
     vim.o.guifont = "Lilex Nerd Font Mono:h12"

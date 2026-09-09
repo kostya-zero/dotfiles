@@ -20,20 +20,35 @@ return {
         },
     },
     {
-        "nvim-neo-tree/neo-tree.nvim",
+        "stevearc/oil.nvim",
+        cmd = "Oil",
         keys = {
-            { "<leader>e", "<cmd>Neotree position=float<cr>", desc = "Open Neotree" },
+            { "<leader>e", "<cmd>Oil --float --preview<cr>", desc = "Open Oil" },
+            { "-", "<cmd>Oil --float --preview<cr>", desc = "Open Oil" },
         },
-        enabled = true,
-        ---@module "neo-tree"
-        ---@class neotree.Config.Base
+        ---@module "oil"
+        ---@class oil.Config
         opts = {
-            filesystem = {
-                bind_to_cwd = true,
+            columns = {
+                "icon",
+                "permissions",
+                "size",
+                "mtime",
             },
-            window = {
-                width = 30,
-                position = "right",
+            keymaps = {
+                ["q"] = { "actions.close", mode = "n" },
+                ["h"] = { "actions.parent", mode = "n" },
+                ["l"] = { "actions.select", mode = "n" },
+            },
+            delete_to_trash = true,
+            skip_confirm_for_simple_edits = true,
+            view_options = {
+                show_hidden = true,
+            },
+            float = {
+                padding = 7,
+                border = "rounded",
+                preview_split = "right",
             },
         },
     },
@@ -58,7 +73,14 @@ return {
     {
         "folke/snacks.nvim",
         keys = {
-            { "<leader>gg", false },
+            { "<leader>e", false },
+            {
+                "<leader>E",
+                function()
+                    Snacks.explorer()
+                end,
+                desc = "Open Snacks explorer",
+            },
         },
         ---@module "snacks"
         ---@type snacks.Config.base
