@@ -13,12 +13,13 @@ local qsipc = "qs -c noctalia-shell ipc call"
 
 ---- Autostart ----
 hl.on("hyprland.start", function()
-	hl.exec_cmd("qs -c noctalia-shell")
+	hl.exec_cmd("noctalia")
 end)
 
 ---- ENVIRONMENT VARIABLES ----
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", "Nordzy-cursors")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 ---- LOOK AND FEEL ----
