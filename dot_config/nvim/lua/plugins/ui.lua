@@ -39,6 +39,21 @@ return {
         },
     },
     {
+        "nvim-lualine/lualine.nvim",
+        url = "https://github.com/kostya-zero/lualine.nvim",
+        opts = {
+            sections = {
+                lualine_a = {
+                    {
+                        "mode",
+                        icons_enabled = true,
+                        icon = "",
+                    },
+                },
+            },
+        },
+    },
+    {
         "folke/which-key.nvim",
         opts = {
             preset = "classic",
