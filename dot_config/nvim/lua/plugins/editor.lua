@@ -31,9 +31,9 @@ return {
         opts = {
             columns = {
                 "icon",
-                "permissions",
-                "size",
-                "mtime",
+                { "permissions", highlight = "Type" },
+                { "size", highlight = "String" },
+                { "mtime", highlight = "Keyword" },
             },
             keymaps = {
                 ["q"] = { "actions.close", mode = "n" },
@@ -42,6 +42,10 @@ return {
             },
             delete_to_trash = true,
             skip_confirm_for_simple_edits = true,
+            preview_win = {
+                preview_method = "fast_scratch",
+                update_on_cursor_moved = true,
+            },
             view_options = {
                 show_hidden = true,
             },
@@ -85,6 +89,9 @@ return {
         ---@module "snacks"
         ---@type snacks.Config.base
         opts = {
+            scroll = {
+                enabled = false,
+            },
             picker = {
                 sources = {
                     explorer = {
