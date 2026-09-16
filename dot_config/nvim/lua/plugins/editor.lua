@@ -85,6 +85,20 @@ return {
                 end,
                 desc = "Open Snacks explorer",
             },
+            {
+                ";;",
+                function()
+                    Snacks.picker.resume()
+                end,
+                desc = "Open previous picker",
+            },
+            {
+                "\\\\",
+                function()
+                    Snacks.picker.buffers()
+                end,
+                desc = "Show active buffers",
+            },
         },
         ---@module "snacks"
         ---@type snacks.Config.base
@@ -105,7 +119,24 @@ return {
                     },
                     files = {
                         layout = {
-                            preset = "vertical",
+                            preset = "dropdown",
+                        },
+                    },
+                    buffers = {
+                        layout = {
+                            preset = "dropdown",
+                        },
+                        preview = false,
+                    },
+
+                    help = {
+                        layout = {
+                            preset = "ivy",
+                        },
+                    },
+                    grep = {
+                        layout = {
+                            preset = "telescope",
                         },
                     },
                 },
@@ -129,10 +160,5 @@ return {
                 },
             },
         },
-    },
-    {
-        "jim-fx/sudoku.nvim",
-        cmd = "Sudoku",
-        opts = {},
     },
 }
