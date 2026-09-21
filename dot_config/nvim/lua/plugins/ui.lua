@@ -10,10 +10,6 @@ return {
                 show_tab_indicators = false,
                 modified_icon = "",
                 always_show_bufferline = false,
-                indicator = {
-                    style = "none",
-                },
-                separator_style = "thin",
             },
         },
     },

@@ -21,7 +21,7 @@ return {
     },
     {
         "stevearc/oil.nvim",
-        cmd = "Oil",
+        lazy = false,
         keys = {
             { "<leader>e", "<cmd>Oil --float --preview<cr>", desc = "Open Oil" },
             { "-", "<cmd>Oil --float --preview<cr>", desc = "Open Oil" },

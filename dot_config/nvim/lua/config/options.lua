@@ -59,11 +59,11 @@ vim.filetype.add({
 
 -- LazyVim specific options
 vim.g.lazyvim_blink_main = false
-vim.g.lazyvim_ts_lsp = "tsgo"
+vim.g.lazyvim_ts_lsp = "tsc"
 vim.g.snacks_animate = false
 
 -- Options specific for my config
-vim.g.zero_transparency = false
+vim.g.zero_transparency = true
 
 -- Neovide
 if vim.g.neovide then
