@@ -4,11 +4,12 @@
 command = fish
 
 # theme
-theme = Solarized Dark - Patched
+# theme = Solarized Dark - Patched
+theme = Solarized Dark - Vivid
 
 # font
-font-family = IoskeleyMono Nerd Font
-font-size = 12
+font-family = Lilex Nerd Font
+font-size = 14
 
 # cursor
 cursor-style = block
@@ -20,7 +21,7 @@ window-height = 30
 window-padding-balance = true
 window-padding-y = 0
 window-padding-x = 0
-background-opacity = 0.9
+background-opacity = 0.85
 
 # QoL
 app-notifications = no-clipboard-copy
