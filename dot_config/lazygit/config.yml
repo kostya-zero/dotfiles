@@ -1,5 +1,9 @@
+git:
+  diffRenderers:
+    - command: delta --dark --syntax-theme="Solarized (dark)" --paging=never
 gui:
   mouseEvents: false
+  scrollHeight: 20
   nerdFontsVersion: "3"
   theme:
     unstagedChangesColor:
