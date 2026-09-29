@@ -103,12 +103,6 @@ return {
         ---@module "snacks"
         ---@type snacks.Config.base
         opts = {
-            bigfile = {
-                enabled = true,
-            },
-            quickfile = {
-                enabled = true,
-            },
             scroll = {
                 enabled = false,
             },
@@ -148,9 +142,6 @@ return {
             },
             dashboard = {
                 width = 40,
-                preset = {
-                    -- header = "",
-                },
                 sections = {
                     { section = "header" },
                     { section = "keys", gap = 0, padding = 1 },

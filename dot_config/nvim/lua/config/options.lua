@@ -61,13 +61,3 @@ vim.filetype.add({
 vim.g.lazyvim_blink_main = false
 vim.g.lazyvim_ts_lsp = "tsc"
 vim.g.snacks_animate = false
-
--- Options specific for my config
-vim.g.zero_transparency = true
-
--- Neovide
-if vim.g.neovide then
-    vim.o.guifont = "Lilex Nerd Font Mono:h12"
-    vim.g.neovide_refresh_rate = 75
-    vim.g.neovide_cursor_animation_length = 0
-end
