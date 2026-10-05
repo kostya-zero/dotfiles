@@ -143,7 +143,6 @@ return {
             dashboard = {
                 width = 40,
                 sections = {
-                    { section = "header" },
                     { section = "keys", gap = 0, padding = 1 },
                     { section = "startup" },
                 },
