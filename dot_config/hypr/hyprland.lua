@@ -14,12 +14,12 @@ local qsipc = "noctalia msg"
 ---- Autostart ----
 hl.on("hyprland.start", function()
 	hl.exec_cmd("noctalia")
+	hl.exec_cmd("hyprctl setcursor Adwaita 24")
 end)
 
 ---- ENVIRONMENT VARIABLES ----
-hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_THEME", "Nordzy-cursors")
+hl.env("HYPRCURSOR_THEME", "Adwaita")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 ---- LOOK AND FEEL ----
@@ -37,7 +37,7 @@ hl.config({
 		layout = "dwindle",
 	},
 	decoration = {
-		rounding = 5,
+		rounding = 0,
 		rounding_power = 2,
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
@@ -259,7 +259,7 @@ hl.config({
 		sensitivity = 0, -- -1.0 - 1.0
 		touchpad = {
 			natural_scroll = true,
-			scroll_factor = 0.3,
+			scroll_factor = 1.0,
 		},
 	},
 })
@@ -283,7 +283,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
-hl.bind("ALT + SPACE", hl.dsp.exec_cmd(qsipc .. " panel-toggle launcher"))
+hl.bind("ALT + SPACE", hl.dsp.exec_cmd("vicinae toggle"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(qsipc .. " session lock"))
 
 -- Move focus with mainMod + arrow keys
@@ -312,35 +312,33 @@ hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
--- Laptop multimedia keys for volume and LCD brightness
+-- Laptop multimedia keys
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(qsipc .. " volume-up 5"), { locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(qsipc .. " volume-down 5"), { locked = true, repeating = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd(qsipc .. " volume-mute"), { locked = true })
+hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd(qsipc .. " mic-mute"), { locked = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(qsipc .. " brightness-up"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(qsipc .. " brightness-down"), { locked = true, repeating = true })
+hl.bind("XF86KbdBrightnessUp", hl.dsp.exec_cmd(qsipc .. " keyboard-backlight-up"), { locked = true, repeating = true })
 hl.bind(
-	"XF86AudioRaiseVolume",
-	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
+	"XF86KbdBrightnessDown",
+	hl.dsp.exec_cmd(qsipc .. " keyboard-backlight-down"),
 	{ locked = true, repeating = true }
 )
-hl.bind(
-	"XF86AudioLowerVolume",
-	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioMute",
-	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioMicMute",
-	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
-	{ locked = true, repeating = true }
-)
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
+hl.bind("XF86KbdLightOnOff", hl.dsp.exec_cmd(qsipc .. " keyboard-backlight-toggle"), { locked = true })
 
--- Requires playerctl
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd(qsipc .. " media next"), { locked = true })
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd(qsipc .. " media pause"), { locked = true })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(qsipc .. " media toggle"), { locked = true })
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(qsipc .. " media previous"), { locked = true })
+hl.bind("XF86AudioStop", hl.dsp.exec_cmd(qsipc .. " media stop"), { locked = true })
+
+-- HONOR / Huawei hotkeys
+hl.bind("XF86WLAN", hl.dsp.exec_cmd(qsipc .. " wifi-toggle"))
+hl.bind("XF86Display", hl.dsp.exec_cmd(qsipc .. " panel-toggle control-center"))
+hl.bind("XF86Tools", hl.dsp.exec_cmd(qsipc .. " settings-open"))
+hl.bind("XF86NotificationCenter", hl.dsp.exec_cmd(qsipc .. " panel-toggle notifications"))
+hl.bind("Print", hl.dsp.exec_cmd(qsipc .. " screenshot-fullscreen"))
 
 ---- WINDOWS AND WORKSPACES ----
 
