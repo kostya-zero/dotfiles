@@ -9,7 +9,7 @@ theme = Solarized Dark - Vivid
 
 # font
 font-family = Lilex Nerd Font
-font-size = 14
+font-size = 12
 
 # cursor
 cursor-style = block
