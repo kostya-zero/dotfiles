@@ -338,7 +338,7 @@ hl.bind("XF86WLAN", hl.dsp.exec_cmd(qsipc .. " wifi-toggle"))
 hl.bind("XF86Display", hl.dsp.exec_cmd(qsipc .. " panel-toggle control-center"))
 hl.bind("XF86Tools", hl.dsp.exec_cmd(qsipc .. " settings-open"))
 hl.bind("XF86NotificationCenter", hl.dsp.exec_cmd(qsipc .. " panel-toggle notifications"))
-hl.bind("Print", hl.dsp.exec_cmd(qsipc .. " screenshot-fullscreen"))
+hl.bind("Print", hl.dsp.exec_cmd(qsipc .. " screenshot-region"))
 
 ---- WINDOWS AND WORKSPACES ----
 
