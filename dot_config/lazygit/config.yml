@@ -1,28 +1,36 @@
 git:
   diffRenderers:
-    - command: delta --dark --syntax-theme="Solarized (dark)" --paging=never
+    - command: delta --dark --syntax-theme=ansi --paging=never
 gui:
   mouseEvents: false
   scrollHeight: 20
   nerdFontsVersion: "3"
   theme:
-    unstagedChangesColor:
-      - "#ff6c6a"
-    selectedLineBgColor:
-      - "#063540"
-    searchingActiveBorderColor:
-      - "#ffbab9"
-      - "bold"
-    optionsTextColor:
-      - "#5aaefa"
-    inactiveBorderColor:
-      - "#664c00"
-    defaultFgColor:
-      - "#b6c5c6"
-    cherryPickedCommitFgColor:
-      - "#5aaefa"
-    cherryPickedCommitBgColor:
-      - "#5aaefa"
     activeBorderColor:
-      - "#ffbab9"
-      - "bold"
+      - '#cecece'
+      - bold
+    inactiveBorderColor:
+      - '#3a3a3a'
+    searchingActiveBorderColor:
+      - '#cecece'
+      - bold
+    optionsTextColor:
+      - '#ed756e'
+    selectedLineBgColor:
+      - '#2e2e2e'
+    inactiveViewSelectedLineBgColor:
+      - '#222222'
+    cherryPickedCommitFgColor:
+      - '#ed756e'
+    cherryPickedCommitBgColor:
+      - '#3ba6f5'
+    markedBaseCommitFgColor:
+      - '#ed756e'
+    markedBaseCommitBgColor:
+      - '#c39900'
+    unstagedChangesColor:
+      - '#ed756e'
+    defaultFgColor:
+      - '#cecece'
+  authorColors:
+    '*': '#968ff7'
