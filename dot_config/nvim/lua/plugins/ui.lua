@@ -37,16 +37,13 @@ return {
     {
         "nvim-lualine/lualine.nvim",
         url = "https://github.com/kostya-zero/lualine.nvim",
+        ---@module "lualine"
         opts = {
-            sections = {
-                lualine_a = {
-                    {
-                        "mode",
-                        icons_enabled = true,
-                        icon = "",
-                    },
-                },
+            options = {
+                -- component_separators = { left = "", right = "" },
+                -- section_separators = { left = "", right = "" },
             },
+            sections = {},
         },
     },
     {
